@@ -14,6 +14,8 @@
 		3F021AF9282B4A1F007BE5F7 /* rumahkuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F021AF8282B4A1F007BE5F7 /* rumahkuTests.swift */; };
 		3F021B03282B4A1F007BE5F7 /* rumahkuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F021B02282B4A1F007BE5F7 /* rumahkuUITests.swift */; };
 		3F021B05282B4A1F007BE5F7 /* rumahkuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F021B04282B4A1F007BE5F7 /* rumahkuUITestsLaunchTests.swift */; };
+		3F021B12282B4D7A007BE5F7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F021B11282B4D7A007BE5F7 /* CardView.swift */; };
+		3F021B14282B4DB5007BE5F7 /* CardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F021B13282B4DB5007BE5F7 /* CardView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		3F021AFE282B4A1F007BE5F7 /* rumahkuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rumahkuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F021B02282B4A1F007BE5F7 /* rumahkuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rumahkuUITests.swift; sourceTree = "<group>"; };
 		3F021B04282B4A1F007BE5F7 /* rumahkuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rumahkuUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F021B11282B4D7A007BE5F7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3F021B13282B4DB5007BE5F7 /* CardView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				3F021AE7282B4A1E007BE5F7 /* rumahkuApp.swift */,
 				3F021AE9282B4A1E007BE5F7 /* ContentView.swift */,
+				3F021B11282B4D7A007BE5F7 /* CardView.swift */,
+				3F021B13282B4DB5007BE5F7 /* CardView2.swift */,
 				3F021AEB282B4A1E007BE5F7 /* Assets.xcassets */,
 				3F021AED282B4A1E007BE5F7 /* Preview Content */,
 			);
@@ -258,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F021AEA282B4A1E007BE5F7 /* ContentView.swift in Sources */,
+				3F021B14282B4DB5007BE5F7 /* CardView2.swift in Sources */,
+				3F021B12282B4D7A007BE5F7 /* CardView.swift in Sources */,
 				3F021AE8282B4A1E007BE5F7 /* rumahkuApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
