@@ -17,12 +17,13 @@ struct CardView2: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(cardLabelText)
-                .foregroundColor(.mint)
-                .fontWeight(.black)
+                .foregroundColor(.primary)
+                .fontWeight(.medium)
+            Spacer()
             
             ZStack {
                 Rectangle()
-                    .foregroundColor(.gray)
+                    .foregroundColor(.primary)
                     .cornerRadius(10)
                 HStack {
                     Spacer()

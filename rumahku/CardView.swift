@@ -15,12 +15,13 @@ struct CardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(cardLabelText)
-                .foregroundColor(.mint)
-                .fontWeight(.black)
+                .foregroundColor(.primary)
+                .fontWeight(.medium)
+            Spacer()
             
             ZStack {
                 Rectangle()
-                    .foregroundColor(.gray)
+                    .foregroundColor(.primary)
                     .cornerRadius(10)
                 HStack {
                     Spacer()
@@ -35,7 +36,7 @@ struct CardView: View {
                     Rectangle()
                         .foregroundColor(Color(red: 128/255, green: 128/255, blue: 128/255))
                         .frame(width: 1, height: 70)
-                    .foregroundColor(.white)
+                    .foregroundColor(.primary)
                 }
                 .padding(5)
             }

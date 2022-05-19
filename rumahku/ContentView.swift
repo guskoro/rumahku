@@ -41,63 +41,53 @@ struct ContentView: View {
     
     init() {
         UISegmentedControl.appearance()
-            .selectedSegmentTintColor = UIColor(.mint)
+            .selectedSegmentTintColor = UIColor(.white)
     }
     
     var body: some View {
         GeometryReader { geo in
             VStack(alignment: .center, spacing: 20) {
                 //Apps name
-                Text("Rumahku")
+//                Text("Rumahku")
+//                    .fontWeight(.heavy)
+//                    .foregroundColor(.primary)
+//                    .font(.largeTitle)
+                Text("Plan your Dream House")
+                    .fontWeight(.bold)
                     .foregroundColor(.primary)
-                    .font(.system(size: 40, weight: .black, design: .default))
-                Text("Budget Plan")
-                    .foregroundColor(.primary)
-                    .font(.system(size: 20, weight: .black, design: .default))
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    .accessibilityLabel(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/)
                 
-                //Card view for Total Price
-                CardView(cardLabelText: "Total Price", totalAmount: hargaBangunan)
-                    .frame(width: geo.size.width, height: 100)
-                
-                //Card view for Building Area
-                CardView2(cardLabelText: "Building Area", totalSquare: cobaLuas, totalLength: length, totalWidth: width)
-                    .frame(width: geo.size.width, height: 100)
-                
-                TitleView(title: "Price Option")
-                //Price option picker
-                Picker("Price option", selection: $ratePrice) {
-                    ForEach(0..<ratePrices.count) {
-                        Text("IDR \(self.ratePrices[$0]) jt")
-                    }
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                
-                .padding()
                 
                 // Building detail input
-                TitleView(title: "Building detail")
+                TitleView(title: "Input your building detail")
                 VStack {
                     HStack {
                         TextField("Length", text: $panjang)
                             .foregroundColor(.primary)
-                            .font(.system(size: 40, weight: .black, design: .rounded))
+                            .font(.title)
                             .keyboardType(.decimalPad)
                             .focused($isInputActive)
+                            .accessibilityLabel(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/)
                         
                         Text("meter")
                             .foregroundColor(.primary)
-                            .font(.system(size: 40, weight: .black, design: .rounded))
+                            .font(.largeTitle)
+                            .fontWeight(.medium)
                     }
                     HStack {
                         TextField("Width", text: $lebar)
                             .foregroundColor(.primary)
-                            .font(.system(size: 40, weight: .black, design: .rounded))
+                            .font(.title)
                             .keyboardType(.decimalPad)
                             .focused($isInputActive)
+                            .accessibilityLabel(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/)
                         
                         Text("meter")
                             .foregroundColor(.primary)
-                            .font(.system(size: 40, weight: .black, design: .rounded))
+                            .font(.largeTitle)
+                            .fontWeight(.medium)
                     }
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
@@ -108,6 +98,25 @@ struct ContentView: View {
                         }
                     }
                 }
+                .padding()
+                
+                //Card view for Building Area
+                CardView2(cardLabelText: "Building Area", totalSquare: cobaLuas, totalLength: length, totalWidth: width)
+                    .frame(width: geo.size.width, height: 100)
+                
+                TitleView(title: "Price Option Square Meter")
+                //Price option picker
+                Picker("Price option", selection: $ratePrice) {
+                    ForEach(0..<ratePrices.count) {
+                        Text("IDR \(self.ratePrices[$0]) jt")
+                            .foregroundColor(.primary)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                
+                //Card view for Total Price
+                CardView(cardLabelText: "Total Price", totalAmount: hargaBangunan)
+                    .frame(width: geo.size.width, height: 100)
             }
         }
         .padding()
@@ -117,7 +126,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.dark)
+            .previewInterfaceOrientation(.portrait)
     }
 }
 
@@ -128,8 +137,8 @@ struct TitleView: View {
     var body: some View {
         HStack {
             Text(title)
-                .foregroundColor(.mint)
-                .fontWeight(.black)
+                .foregroundColor(.primary)
+                .fontWeight(.medium)
             Spacer()
         }
     }
